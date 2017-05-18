@@ -1,0 +1,32 @@
+CREATE DATABASE "pe-puppetdb" OWNER "pe-puppetdb" ENCODING 'utf8' LC_CTYPE 'en_US.utf8' LC_COLLATE 'en_US.utf8' template template0;
+CREATE DATABASE "pe-orchestrator" OWNER "pe-orchestrator" ENCODING 'utf8' LC_CTYPE 'en_US.utf8' LC_COLLATE 'en_US.utf8' template template0;
+CREATE DATABASE "pe-activity" OWNER "pe-activity" ENCODING 'utf8' LC_CTYPE 'en_US.utf8' LC_COLLATE 'en_US.utf8' template template0;
+CREATE DATABASE "pe-classifier" OWNER "pe-classifier" ENCODING 'utf8' LC_CTYPE 'en_US.utf8' LC_COLLATE 'en_US.utf8' template template0;
+CREATE DATABASE "pe-rbac" OWNER "pe-rbac" ENCODING 'utf8' LC_CTYPE 'en_US.utf8' LC_COLLATE 'en_US.utf8' template template0;
+
+\c "pe-rbac"
+CREATE EXTENSION citext;
+CREATE EXTENSION pg_trgm;
+CREATE EXTENSION plpgsql;
+CREATE EXTENSION pgcrypto;
+
+\c "pe-orchestrator"
+CREATE EXTENSION citext;
+CREATE EXTENSION pg_trgm;
+CREATE EXTENSION plpgsql;
+
+\c "pe-puppetdb"
+CREATE EXTENSION citext;
+CREATE EXTENSION pg_trgm;
+CREATE EXTENSION plpgsql;
+CREATE EXTENSION pgcrypto;
+
+\c "pe-classifier"
+CREATE EXTENSION citext;
+CREATE EXTENSION pg_trgm;
+CREATE EXTENSION plpgsql;
+
+\c "pe-activity"
+CREATE EXTENSION citext;
+CREATE EXTENSION pg_trgm;
+CREATE EXTENSION plpgsql;
